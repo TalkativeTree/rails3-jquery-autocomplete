@@ -69,7 +69,7 @@ module Rails3JQueryAutocomplete
             items = get_autocomplete_items(:model => get_object(class_name), \
               :options => options, :term => term, :method => method)
           else
-            items = {}
+            items = []
           end
 
           render :json => json_for_autocomplete(items, options[:display_value] ||= method, options[:extra_data], &block)
